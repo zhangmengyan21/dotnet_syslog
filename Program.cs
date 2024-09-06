@@ -5,8 +5,6 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using static Test.Program.Syslog;
 
-using Serilog;
-
 public static partial class Program
 {
     internal static partial class Syslog
