@@ -51,13 +51,16 @@ public static partial class Program
             stringBuilder.Append(a);
         }
         string message = stringBuilder.ToString();
-
+        var tag = Marshal.StringToHGlobalAnsi("server_1");
+        
         Stopwatch sw = new();
         sw.Start();
-        openlog(dictTag[1], Option.NoDelay, Facility.LOG_LOCAL0);
+        
+        openlog(tag, Option.NoDelay, Facility.LOG_LOCAL0);
         for (int i = 0; i < RUN_TIMES; i++) {
             syslog((int)Level.Info, msg);
         }
+        
         sw.Stop();
         Console.WriteLine($"{STRING_LENGTH}:" + sw.ElapsedMilliseconds);
     }
