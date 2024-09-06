@@ -8,8 +8,4 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Serilog.Sinks.SyslogMessages" Version="3.0.2" />
-  </ItemGroup>
 </Project>
