@@ -48,9 +48,9 @@ public static partial class Program
         StringBuilder stringBuilder = new StringBuilder();
         for (int j = 0; j < STRING_LENGTH; j++)
         {
-            stringBuilder.Append(a);
+            stringBuilder.Append('a');
         }
-        string message = stringBuilder.ToString();
+        string msg = stringBuilder.ToString();
         var tag = Marshal.StringToHGlobalAnsi("server_1");
         
         Stopwatch sw = new();
