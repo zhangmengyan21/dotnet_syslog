@@ -31,7 +31,7 @@ public static partial class Program
         [LibraryImport("libc")]
         internal static partial void openlog(IntPtr ident, Option option, Facility facility);
 
-        [LibraryImport("libc", StringMarshalling = StringMarshalling.Utf16)]
+        [LibraryImport("libc", StringMarshalling = StringMarshalling.Utf8)]
         internal static partial void syslog(int priority, string message);
 
         [LibraryImport("libc")]
